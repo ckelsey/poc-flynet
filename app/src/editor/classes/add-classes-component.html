@@ -1,0 +1,15 @@
+<div id="classes-component">
+	<h3>Classes</h3>
+
+	<div ng-repeat="class in ElementModel.elementStructure.classes track by class.id" ng-class="{'active':classesToggle[class.id]}" class="toggle-item">
+		<div class="toggler" ng-click="classesToggle[class.id] = classesToggle[class.id] ? false : true">
+			<div class="flex-wrapper">
+				<span ng-bind="class.name" class="flex-grow1"></span>
+				<button ng-click="addClass(class)">Add</button>
+			</div>
+		</div>
+		<div class="toggle-content">
+			<rule-repeat clss="class"></rule-repeat>
+		</div>
+	</div>
+</div>

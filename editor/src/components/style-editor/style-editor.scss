@@ -1,0 +1,112 @@
+// @import "./../../style/colors.scss";
+$color1: #000606;
+$color2: #002936;
+$color3: #00394c;
+$color4: #035a86;
+$color5: #06a7f9;
+$color6: #8bd6fd;
+$color7: #d5f1fd;
+
+$colorOrange: rgba(229, 156, 37, 1);
+
+#style-area{
+	width: 100%;
+	height: 70px;
+	overflow: hidden;
+	background: $color2;
+	transition: height .2s;
+
+	&.active{
+		height: 30vh;
+		overflow: scroll;
+	}
+
+	styling-component{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		vertical-align: top;
+
+		.styling-component{
+			height: 100%;
+
+			h3{
+				padding: 4px 21px 21px 0px;
+				margin: 0px;
+				color: $color7;
+			}
+
+			.flex-wrapper{
+				height: 100%;
+
+				.flex-column{
+					height: 100%;
+				}
+			}
+		}
+
+		label{
+			display: block;
+			margin-bottom: 7px;
+			color: $color7;
+		}
+
+		.tagName{
+			padding: 7px;
+			margin: 0px;
+			text-transform: uppercase;
+			color: $color6;
+
+			label{
+				font-weight: bold;
+				color: $color6;
+				display: inline-block;
+			}
+		}
+
+		input{
+			background: #fff;
+			padding: 5px;
+			border-radius: 2px;
+			color: $color3;
+			font-size: 14px;
+			width: 100%;
+			box-sizing: border-box;
+			box-shadow: 0px 1px 1px transparentize($color2, .8);
+
+			transform: scale(1) translateZ(0);
+			transition: transform .2s;
+
+			&:hover{
+				transform: scale(1.025) translateZ(0);
+			}
+		}
+
+		.input{
+			display: block;
+			margin: 21px 0px;
+		}
+
+		button{
+			background: $color3;
+			border-radius: 2px;
+			transform: scale(1) translateZ(0);
+			transition: transform .2s;
+			padding: 7px 14px;
+
+			&:nth-child(1){
+				background: $color5;
+			}
+
+			&:hover{
+				transform: scale(1.1) translateZ(0);
+			}
+
+
+		}
+	}
+
+	input{
+		background: $color3;
+	}
+}

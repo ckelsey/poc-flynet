@@ -1,0 +1,9 @@
+<div class="element-classes">
+	<div class="element-class flex-wrapper" ng-repeat="class in ElementActions.selectedElement.data.classes">
+		<span class="element-class-name flex-grow1" ng-bind="class.name"></span>
+		<span class="element-class-actions">
+			<button class="primary small" ng-click="removeClass(class)">Remove</button>
+		</span>
+	</div>
+	<button ng-click="openAddClassDialogue()">Add</button>
+</div>

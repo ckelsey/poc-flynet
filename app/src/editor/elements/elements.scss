@@ -1,0 +1,236 @@
+@import "colors";
+
+body.mousedown, body.mousedown *, body.mousedown:active, body.mousedown:active *{
+	// cursor: url(../../../assets/closedhand.cur), default !important;
+	user-select: none;
+	// cursor: move;
+}
+
+drag-drop-element{
+	display: block;
+	color: $color7;
+	font-size: 14px;
+	text-align: left;
+	// cursor: url(../../../assets/openhand.cur), default !important;
+	cursor: grab;
+	opacity: .25;
+	padding: 7px;
+	transform: scale(1) translateZ(0);
+	filter: blur(none);
+	backface-visibility: hidden;
+	transition: opacity .2s, background .2s, transform .2s;
+
+	&:hover{
+		opacity: .5;
+		background: $color3;
+		transform: scale(1.1) translateZ(0);
+	}
+
+	&:active, &:active *, button:active, i:active{
+		// cursor: url(../../../assets/closedhand.cur), default !important;
+	}
+}
+
+element-wrapper{
+	position: relative;
+	display: inline-block;
+	transition: box-shadow .2s;
+
+	.rotate-45{
+		transform: rotate(-45deg);
+	}
+
+	element-html{
+		display: inline-block;
+	}
+
+	element-controls{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 0px;
+		overflow: hidden;
+		text-align: center;
+		display: block;
+		height: 100%;
+		min-height: 70px;
+		transition: width .2s;
+
+		button{
+			color: $color4;
+			background: transparentize($color5, .66);
+			width: 28px;
+			text-align: center;
+			transition: all .2s;
+
+			&:hover{
+				background: $color4;
+				color: $color7;
+				transform: scale(1.1) translateZ(0);
+			}
+
+			&.resizer-button{
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+			}
+		}
+	}
+
+	&[type="div"]{
+		display: block;
+	}
+
+	&:hover{
+		box-shadow: inset 0 0 0 1px transparentize($colorOrange, .5), 0 0 1px transparentize($colorOrange, .5);
+		background: transparentize(#aaa, .8);
+
+		& > element-controls{
+			width: 28px;
+			overflow: hidden;
+		}
+
+		.trumbowyg-button-pane{
+			display: flex;
+		}
+
+		// element-wrapper{
+		// 	box-shadow: none;
+		// 	background: transparent;
+		// }
+	}
+}
+
+element-controls{
+	position: absolute;;
+	display: table;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+
+	.element-controls-wrapper{
+		position: absolute;
+		width: 100%;
+		height: 35px;
+		bottom: 0px;
+
+	}
+
+	.element-controls{
+		// position: absolute;
+		//     z-index: 999999;
+		//     top: -10px;
+		//     right: 0;
+		width: 100%;
+		height: 100%;
+		text-align: right;
+
+		button{
+			color: $color3;
+
+			&.resizer-button{
+				i{
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+}
+
+.controls-hovering{
+	position: relative;
+}
+
+.edit-element-button{
+	width: 16px;
+	height: 16px;
+	color: $colorOrange;
+	position: absolute;
+	font-size: 16px;
+	display: inline-block;
+	cursor: pointer;
+	transform: scale(1) translateZ(0);
+	transition: transform .2s, background .2s, box-shadow .2s, color .2s;
+	line-height: 16px;
+	text-align: center;
+	pointer-events: all;
+	padding: 3px;
+	border-radius: 2px;
+	text-shadow: 0px 0px 0px 1px #000;
+
+	&:hover{
+		transform: scale(1.2) translateZ(0);
+		background: rgba(255, 255, 255, .6);
+		color: $color4;
+		box-shadow: 0px 1px 3px $color3;
+		cursor: move;
+	}
+
+	&#edit-element-button-resize{
+		bottom: 0px;
+		right: 0px;
+
+		i{
+			transform: rotate(-45deg);
+		}
+
+	}
+
+	&#edit-element-button-move{
+		top: 50%;
+		left: 50%;
+		margin: -11px 0px 0px -11px;
+
+		i{
+			transform: rotate(-45deg);
+		}
+
+	}
+}
+
+#element-hover-overlay-wrapper{
+	position: absolute;
+	top: 41px;
+	right: 0px;
+	pointer-events: none;
+
+	&.resize-mousedown{
+		pointer-events: all;
+
+		#element-hover-overlay-inner{
+			pointer-events: all;
+		}
+	}
+}
+
+#element-hover-overlay-inner{
+	position: relative;
+	pointer-events: none;
+	background: transparentize($color5, .8);
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, transparentize($color6, .6) 15px, transparentize($color6, .6) 30px);
+	box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,.05), 0px 0px 0px 1px transparentize($color5, .8);
+}
+
+.edit-element-buttons{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+// TO BE PUT SOMEWHERE ELSE
+img.default-element{
+	max-width: 100%;
+}
+
+div.default-element{
+	height: 35px;
+	width: 100%;
+	display: inline-block;
+	background-image: linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.25) 75%, rgba(0,0,0,.25)), linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.25) 75%, rgba(0,0,0,.25));
+	background-size:30px 30px;
+	background-position:0 0, 15px 15px
+}

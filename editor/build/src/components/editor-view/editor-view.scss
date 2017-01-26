@@ -1,0 +1,171 @@
+// @import "./../../style/colors.scss";
+
+$color1: #000606;
+$color2: #002936;
+$color3: #00394c;
+$color4: #035a86;
+$color5: #06a7f9;
+$color6: #8bd6fd;
+$color7: #d5f1fd;
+
+$colorOrange: rgba(229, 156, 37, 1);
+
+html{
+	min-height: 100%;
+}
+
+body{
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 0px;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	overflow: auto;
+}
+
+div[ui-view], div[ui-view] > div{
+	height: 100%;
+}
+
+input, button, textarea, select{
+	background-color: transparent;
+	color: $color7;
+	border: none;
+	appearance: none;
+	padding: 7px;
+	outline: none !important;
+}
+
+button, select{
+	cursor: pointer;
+}
+
+button{
+	font-size: 16px;
+}
+
+#wrapper, .flex-wrapper{
+	display: flex;
+	width: 100%;
+
+	.flex-fullscreen{
+		display: flex;
+		width: 100%;
+		height: 100vh;
+
+		&.flex-column{
+			flex-flow: column;
+		}
+
+		.flex-row{
+			display: flex;
+			flex-flow: row;
+		}
+	}
+
+	.flex-grow1{
+		flex-grow: 1;
+	}
+}
+
+.wrapper-column{
+	vertical-align: top;
+	overflow: auto;
+}
+
+#preview-area{
+	flex-grow: 1;
+}
+
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
+#new-template-dialogue{
+
+}
+
+.dialogue-overlay{
+	position: fixed;
+	width: 0%;
+	height: 0%;
+	left: 0px;
+	top: 0px;
+	background: transparentize($color2, .1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: none;
+	overflow: hidden;
+	transition: all .2s;
+
+	&.active{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		box-shadow: 0px 1px 1px transparentize($color1, .1), 0px 3px 10px transparentize($color1, .1);
+	}
+
+	.dialogue-box{
+		max-width: 400px;
+		width: 90%;
+		margin: auto;
+		background-color: $color7;
+		box-sizing: border-box;
+		padding: 14px;
+		color: $color3;
+		border-radius: 2px;
+
+		h3{
+			margin-top: 0px;
+		}
+
+		label{
+			display: block;
+			margin-bottom: 7px;
+		}
+
+		input{
+			background: #fff;
+			padding: 5px;
+			border-radius: 2px;
+			color: $color3;
+			font-size: 14px;
+			width: 100%;
+			box-sizing: border-box;
+			box-shadow: 0px 1px 1px transparentize($color2, .8);
+
+			transform: scale(1) translateZ(0);
+			transition: transform .2s;
+
+			&:hover{
+				transform: scale(1.025) translateZ(0);
+			}
+		}
+
+		.input{
+			display: block;
+			margin: 21px 0px;
+		}
+
+		button{
+			background: $color3;
+			border-radius: 2px;
+			transform: scale(1) translateZ(0);
+			transition: transform .2s;
+			padding: 7px 14px;
+
+			&:nth-child(1){
+				background: $color5;
+			}
+
+			&:hover{
+				transform: scale(1.1) translateZ(0);
+			}
+
+
+		}
+	}
+}

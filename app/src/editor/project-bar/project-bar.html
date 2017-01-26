@@ -1,0 +1,14 @@
+<div class="flex-wrapper" style="padding: 7px;box-sizing: border-box;">
+	<div class="flex-column flex-grow1" style="box-sizing: border-box;">
+		<div class="flex-row template-details" style="box-sizing: border-box;">
+			<div class="flex-column" style="padding: 0px 7px 7px 7px; box-sizing: border-box;">
+				<h3 ng-bind-html="ElementModel.templateTitleString" style="display:inline-block; vertical-align:top;"></h3>
+				<button ng-click="newPage()" style="margin-left:7px; font-size: 12px; display:inline-block; vertical-align:top;">New page</button>
+			</div>
+			<div class="flex-column flex-grow1" style="padding: 0px 7px 7px 7px; box-sizing: border-box;text-align: right;">
+				<button ng-click="previousPage()" style="font-size: 12px;">Previous page</button>
+				<button ng-click="nextPage()" style="font-size: 12px;">Next page</button>
+			</div>
+		</div>
+	</div>
+</div>

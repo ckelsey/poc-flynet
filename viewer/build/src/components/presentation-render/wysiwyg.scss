@@ -1,0 +1,64 @@
+// @import "./../../../../src/style/colors.scss";
+
+.trumbowyg-box, .trumbowyg-editor{
+	border: none;
+	width: 100%;
+	min-height: 0px;
+	margin: 0px;
+	position: inherit;
+	display: inline;
+
+	// p{
+	// 	display: block;
+	// 	padding: 0px;
+	// 	margin: 0px;
+	// 	height: auto;
+	// }
+
+	input{
+		// color: $color3;
+	}
+
+	.trumbowyg-modal-box{
+		position: fixed;
+
+		button{
+			padding: 0px;
+		}
+	}
+}
+
+.trumbowyg-button-pane{
+	display: none;
+	position: absolute;
+	width: 281px;
+	top: -35px;
+	left: 0px;
+	margin: 0px !important;
+	padding: 0px;
+	z-index: 99999;
+
+	li{
+		width: 35px;
+		margin: 0px !important;
+		text-align: center;
+
+		button{
+			text-align: center;
+			padding: 0px !important;
+			margin: 0px !important;
+			// color: $color4;
+			// background-image: url(images/icons-black-2x.png)!important;
+
+			&.trumbowyg-fullscreen-button{
+				display: none;
+			}
+		}
+
+
+	}
+}
+
+// .trumbowyg-textarea{
+// 	display: none;
+// }

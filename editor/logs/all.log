@@ -1,0 +1,12 @@
+2016-12-20T21:13:05.772Z - [31merror[39m: Uncaught SecurityError: Blocked a frame with origin "https://localhost:3006" from accessing a cross-origin frame.
+    Error: Blocked a frame with origin "https://localhost:3006" from accessing a cross-origin frame.
+    at HTMLElement.<anonymous> (https://localhost:3006/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291865/dist/js/editor.min.js:1:3277)
+    at HTMLElement.dispatch (https://localhost:3006/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291865/dist/js/editor_vendor.min.js:3:6466)
+    at HTMLElement.r.handle (https://localhost:3006/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291865/dist/js/editor_vendor.min.js:3:3241) userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+2016-12-20T21:13:07.814Z - [31merror[39m: Uncaught SecurityError: Blocked a frame with origin "https://localhost:3006" from accessing a cross-origin frame.
+    Error: Blocked a frame with origin "https://localhost:3006" from accessing a cross-origin frame.
+    at HTMLElement.<anonymous> (https://localhost:3006/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291865/dist/js/editor.min.js:1:3277)
+    at HTMLElement.dispatch (https://localhost:3006/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291865/dist/js/editor_vendor.min.js:3:6466)
+    at HTMLElement.r.handle (https://localhost:3006/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291865/dist/js/editor_vendor.min.js:3:3241) userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+2016-12-20T21:14:17.482Z - [32minfo[39m: hi userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36
+2016-12-20T21:17:09.704Z - [32minfo[39m: hi userAgent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36

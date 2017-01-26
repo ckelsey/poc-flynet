@@ -1,0 +1,15 @@
+<div id="function-component">
+	<h3>Functions</h3>
+
+	<div ng-repeat="fn in ElementModel.elementStructure.functions track by fn.id" ng-class="{'active':functionToggle[fn.id]}" class="toggle-item">
+		<div class="toggler" ng-click="functionToggle[fn.id] = functionToggle[fn.id] ? false : true">
+			<div class="flex-wrapper">
+				<span ng-bind="fn.name" class="flex-grow1"></span>
+				<button ng-click="addFunction(fn)">Add</button>
+			</div>
+		</div>
+		<div class="toggle-content">
+			<textarea ng-model="fn.fn"></textarea>
+		</div>
+	</div>
+</div>

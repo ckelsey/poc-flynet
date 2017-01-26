@@ -1,0 +1,4 @@
+<div class="html-tree-element">
+	<span class="html-tree-element-name" ng-class="'element-tag-' + data.tag" ng-bind="data.name || data.tag" ng-click="ElementActions.selectElement(data.id)" ng-mouseover="showOverlay()" ng-mouseout="ElementActions.removeOverlay()"></span>
+	<html-tree data="content" ng-repeat="content in data.content"></html-tree>
+</div>

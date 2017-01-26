@@ -1,0 +1,123 @@
+<div class="styling-component">
+
+	<div class="flex-wrapper" style="padding: 21px;box-sizing: border-box;">
+		<div class="flex-column flex-grow1" style="box-sizing: border-box;">
+			<div class="flex-row template-details" style="box-sizing: border-box;">
+				<div class="flex-column" style="padding: 0px 7px 7px 7px; box-sizing: border-box;">
+					<h3 ng-bind-html="ElementService.templateTitleString" style="display:inline-block; vertical-align:top;"></h3>
+					<button ng-click="newPage()" style="margin-left:7px; font-size: 12px; display:inline-block; vertical-align:top;">New page</button>
+				</div>
+				<div class="flex-column flex-grow1" style="padding: 0px 7px 7px 7px; box-sizing: border-box;text-align: right;">
+					<!-- <button ng-click="previousPage()" ng-if="ElementService.pageLength && self.lastPage > -1" style="font-size: 12px;">Previous page</button>
+					<button ng-click="nextPage()" ng-if="ElementService.pageLength && ElementService.lastPage < ElementService.pageLength" style="font-size: 12px;">Next page</button> -->
+					<button ng-click="previousPage()" style="font-size: 12px;">Previous page</button>
+					<button ng-click="nextPage()" style="font-size: 12px;">Next page</button>
+				</div>
+			</div>
+			<div ng-if="ElementService.selectedElement" class="flex-row" style="box-sizing: border-box;">
+				<span class="tagName" style="box-sizing: border-box;">Element: <label ng-bind="ElementService.selectedElement.data.tag"></label></span>
+			</div>
+
+			<div class="flex-row" ng-if="ElementService.selectedElement && ElementService.selectedElement.data.tag === 'img'" style="box-sizing: border-box;">
+				<div class="flex-column" style="padding: 7px; box-sizing: border-box;">
+					<div class="input">
+						<label for="el-display">Display</label>
+						<input id="el-display" type="text" ng-model="ElementService.selectedElement.data.attributes.style.display" ng-change="updateAttr('style.display')" />
+					</div>
+					<div class="input">
+						<label for="el-width">Width</label>
+						<input id="el-width" type="text" ng-model="ElementService.selectedElement.data.attributes.style.width" ng-change="updateAttr('style.width')" />
+					</div>
+					<div class="input">
+						<label for="el-height">Height</label>
+						<input id="el-height" type="text" ng-model="ElementService.selectedElement.data.attributes.style.height" ng-change="updateAttr('style.height')" />
+					</div>
+					<div class="input">
+						<label for="el-padding">Padding</label>
+						<input id="el-padding" type="text" ng-model="ElementService.selectedElement.data.attributes.style.padding" ng-change="updateAttr('style.padding')" />
+					</div>
+					<div class="input">
+						<label for="el-margin">Margin</label>
+						<input id="el-margin" type="text" ng-model="ElementService.selectedElement.data.attributes.style.margin" ng-change="updateAttr('style.margin')" />
+					</div>
+				</div>
+				<div class="flex-column" style="padding: 7px;">
+					<div class="input">
+						<label for="el-position">Position</label>
+						<input id="el-position" type="text" ng-model="ElementService.selectedElement.data.attributes.style.position" ng-change="updateAttr('style.position')" />
+					</div>
+					<div class="input">
+						<label for="el-top">Top</label>
+						<input id="el-top" type="text" ng-model="ElementService.selectedElement.data.attributes.style.top" ng-change="updateAttr('style.top')" />
+					</div>
+					<div class="input">
+						<label for="el-bottom">Bottom</label>
+						<input id="el-bottom" type="text" ng-model="ElementService.selectedElement.data.attributes.style.bottom" ng-change="updateAttr('style.bottom')" />
+					</div>
+					<div class="input">
+						<label for="el-left">Left</label>
+						<input id="el-left" type="text" ng-model="ElementService.selectedElement.data.attributes.style.left" ng-change="updateAttr('style.left')" />
+					</div>
+					<div class="input">
+						<label for="el-right">Right</label>
+						<input id="el-right" type="text" ng-model="ElementService.selectedElement.data.attributes.style.right" ng-change="updateAttr('style.right')" />
+					</div>
+
+				</div>
+				<div class="flex-column flex-grow1" style="padding: 7px;">
+					<div class="input">
+						<label for="el-src">Source</label>
+						<input id="el-src" type="text" ng-model="ElementService.selectedElement.data.attributes.src" ng-change="updateAttr('src')" />
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-row" ng-if="ElementService.selectedElement && ElementService.selectedElement.data.tag === 'p'" style="box-sizing: border-box;">
+				<div class="flex-column" style="padding: 7px; box-sizing: border-box;">
+					<div class="input">
+						<label for="el-display">Display</label>
+						<input id="el-display" type="text" ng-model="ElementService.selectedElement.data.attributes.style.display" ng-change="updateAttr('style.display')" />
+					</div>
+					<div class="input">
+						<label for="el-width">Width</label>
+						<input id="el-width" type="text" ng-model="ElementService.selectedElement.data.attributes.style.width" ng-change="updateAttr('style.width')" />
+					</div>
+					<div class="input">
+						<label for="el-height">Height</label>
+						<input id="el-height" type="text" ng-model="ElementService.selectedElement.data.attributes.style.height" ng-change="updateAttr('style.height')" />
+					</div>
+					<div class="input">
+						<label for="el-padding">Padding</label>
+						<input id="el-padding" type="text" ng-model="ElementService.selectedElement.data.attributes.style.padding" ng-change="updateAttr('style.padding')" />
+					</div>
+					<div class="input">
+						<label for="el-margin">Margin</label>
+						<input id="el-margin" type="text" ng-model="ElementService.selectedElement.data.attributes.style.margin" ng-change="updateAttr('style.margin')" />
+					</div>
+				</div>
+				<div class="flex-column" style="padding: 7px; box-sizing: border-box;">
+					<div class="input">
+						<label for="el-font-family">Font family</label>
+						<input id="el-font-family" type="text" ng-model="ElementService.selectedElement.data.attributes.style['font-family']" ng-change="updateAttr('style.font-family')" />
+					</div>
+					<div class="input">
+						<label for="el-font-size">Font size</label>
+						<input id="el-font-size" type="text" ng-model="ElementService.selectedElement.data.attributes.style['font-size']" ng-change="updateAttr('style.font-size')" />
+					</div>
+					<div class="input">
+						<label for="el-font-weight">Font weight</label>
+						<input id="el-font-weight" type="text" ng-model="ElementService.selectedElement.data.attributes.style['font-weight']" ng-change="updateAttr('style.font-weight')" />
+					</div>
+					<div class="input">
+						<label for="el-font-style">Font-style</label>
+						<input id="el-font-style" type="text" ng-model="ElementService.selectedElement.data.attributes.style['font-style']" ng-change="updateAttr('style.font-style')" />
+					</div>
+					<div class="input">
+						<label for="el-color">Color</label>
+						<input id="el-color" type="text" ng-model="ElementService.selectedElement.data.attributes.style.color" ng-change="updateAttr('style.color')" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,42 @@
+html{
+	min-height: 100%;
+}
+
+body{
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+}
+
+body.mousedown, body.mousedown *, body.mousedown:active, body.mousedown:active *{
+	// cursor: url(../../../assets/closedhand.cur), default !important;
+	user-select: none;
+}
+
+[ui-view], #viewer-wrapper, [element-path=""]{
+	height: 100%;
+	width: 100%;
+}
+
+.default-element{
+	max-width: 100%;
+	min-height: 49px;
+}
+
+div.default-element{
+	width: 100%;
+	display: inline-block;
+	background-image: linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.25) 75%, rgba(0,0,0,.25)), linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.25) 75%, rgba(0,0,0,.25));
+	background-size:30px 30px;
+	background-position:0 0, 15px 15px
+}
+
+[contenteditable]{
+	outline: none !important;
+
+	&:focus{
+		background-color: #fff;
+		box-shadow: 0px 1px 3px rgba(0,0,0,.1);
+	}
+}

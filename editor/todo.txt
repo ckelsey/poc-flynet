@@ -1,0 +1,16 @@
+- position buttons smartly
+- move element
+- clear element on mouse up from element picker
+- Add wysiwyg
+- Scale image
+- Add other attributes to img
+- position img to where cursor was
+- drag image
+- delete img
+- bind src
+
+- save data to localStorage
+
+- move demo to actual app
+
+- move docs to component

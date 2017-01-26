@@ -1,0 +1,392 @@
+@import "colors";
+
+styling-component{
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	background: $color2;
+	overflow: visible;
+	position: relative;
+	z-index: 9999999;
+	height: 100%;
+	display: inline-block;
+	// transition: max-height .2s;
+
+	.styling-component{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+
+		a-ckolor{
+			display: none;
+		}
+
+		h3{
+			padding: 4px 21px 21px 0px;
+			margin: 0px;
+			color: $color7;
+		}
+
+		label{
+			display: block;
+			margin-bottom: 0px;
+			color: $color7;
+			font-size: 0px;
+			transition: all .2s;
+		}
+
+		input, select{
+			appearance: none;
+			background: #fff;
+			padding: 0px;
+			border-radius: 2px;
+			color: $color3;
+			font-size: 0px;
+			width: 100%;
+			box-sizing: border-box;
+			box-shadow: none;
+			transform: scale(1) translateZ(0);
+			transition: all .2s;
+		}
+
+		.button, button{
+			background: $color3;
+			border-radius: 2px;
+			transform: scale(1) translateZ(0);
+			transition: all .2s;
+			text-align: center;
+			font-size: 0px;
+			box-sizing: border-box;
+			display: inline-block;
+			vertical-align: middle;
+			color: $color7;
+			cursor: pointer;
+			width: auto;
+			padding: 0px;
+			height: auto;
+			line-height: 0px;
+
+			&.primary{
+				background: $colorOrange;
+				color: #fff;
+			}
+
+			&.flex-last{
+				align-self: flex-end;
+			}
+
+			&.square{
+				padding: 0;
+				width: 0px;
+				height: 0px;
+				margin: 0px;
+				line-height: auto;
+			}
+
+			i{
+				line-height: 0px;
+			}
+
+			.text-menu{
+				position: absolute;
+				text-align: left;
+				font-size: 0px;
+				bottom: 27px;
+				background: $color2;
+				overflow: hidden;
+				width: 0px;
+				height: 0px;
+				left: 0px;
+				z-index: 9999999999;
+
+				.text-menu-item{
+					padding: 0px;
+					font-weight: 100;
+					cursor: pointer;
+					line-height: 16px;
+					transform: scale(1) translateZ(0);
+
+					&:hover, .active{
+						transform: scale(1.1) translateZ(0);
+						background: $color5;
+					}
+
+					&.no-hover{
+						&:hover, .active{
+							transform: scale(1) translateZ(0);
+							background: transparent;
+						}
+					}
+				}
+			}
+
+			&:hover .text-menu{
+				font-size: 12px;
+				overflow: hidden;
+				width: auto;
+				height: auto;
+				background: lighten($color2, 2%);
+
+				.text-menu-item{
+					padding: 5px 10px;
+				}
+
+				&.link-menu{
+					width: 210px;
+
+					input{
+						font-size: 12px;
+						margin: 7px 0px;
+					}
+
+					.button{
+						font-size: 14px;
+						padding: 5px 0px 0px 0px;
+						width: 50px;
+						margin: 7px 0px;
+					}
+				}
+			}
+		}
+
+		.radio-input{
+			color: $color7;
+			font-size: 0px;
+			display: none;
+		}
+
+		.flex-wrapper{
+			height: 100%;
+
+			.flex-column{
+				height: 100%;
+			}
+
+			.flex-item{
+				margin: 0px;
+				// transition: all .2s;
+			}
+		}
+
+		.styling-component-inner{
+			padding: 0px;
+			font-size: 0px;
+			// transition: padding .2s, font-size .2s;
+		}
+
+		&.active {
+			a-ckolor{
+				display: inline-block;
+			}
+
+			.styling-header{
+				background: darken($color2, 5%);
+				margin-bottom: 14px;
+				padding: 0px 21px;
+				box-sizing: border-box;
+			}
+
+			.well {
+				background: rgba(0, 0, 0, 0.17);
+				border-radius: 2px;
+				box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.18);
+				padding: 7px;
+				box-sizing: border-box;
+			}
+
+			.tabs{
+				margin-bottom: 21px;
+
+				button{
+					&.active{
+						background: $color5;
+					}
+				}
+			}
+
+			.flex-wrapper>.flex-item{
+				margin: 14px 7px;
+
+				&.non-flex{
+					margin: 7px;
+					flex-grow: 0 !important;
+				}
+			}
+
+			.styling-component-inner{
+				padding: 0px;
+				font-size: 12px;
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+
+				.styling-component-inner-inner{
+					padding: 0px 21px 21px 21px;
+				}
+			}
+
+			label{
+				margin-bottom: 7px;
+				font-size: 12px;
+			}
+
+			input, select{
+				padding: 6px 5px 7px;
+				font-size: 12px;
+				box-shadow: 0px 1px 1px transparentize($color2, .8);
+
+				&:hover{
+					transform: scale(1.025) translateZ(0);
+				}
+
+				&[type="radio"]{
+					width: 10px;
+					vertical-align: middle;
+				}
+
+				&.in-line{
+					background: transparent;
+					color: $color7;
+					padding: 5px;
+					transform: none;
+					transition: all .2s;
+
+					&:hover{
+						background: rgba(255, 255, 255, .1);
+						transform: none;
+					}
+				}
+
+				&#el-name{
+					font-size: 16px;
+				}
+			}
+
+			.button, button{
+				transform: scale(1) translateZ(0);
+				font-size: 12px;
+				padding: 0px 10px;
+				line-height: 28px;
+
+				&.square{
+					width: 28px;
+					height: 28px;
+					margin: 0px 1px;
+					padding: 0px;
+				}
+
+				i{
+					line-height: 28px;
+				}
+
+				&:hover, .active{
+					transform: scale(1.1) translateZ(0);
+				}
+
+				&:hover .text-menu{
+					font-size: 12px;
+
+					.text-menu-item{
+						padding: 5px 10px;
+					}
+
+					&.link-menu{
+						width: 210px;
+
+						input{
+							font-size: 12px;
+							margin: 7px 0px;
+						}
+
+						.button{
+							font-size: 14px;
+							padding: 5px 0px 0px 0px;
+							width: 50px;
+							margin: 7px 0px;
+						}
+					}
+				}
+			}
+
+			.radio-input{
+				display: inline-block;
+				font-size: 12px;
+			}
+
+			.p-inputs, .image-inputs{
+				width: auto;
+				max-width: 0px;
+				margin: 0px !important;
+				max-height: 0px;
+				overflow: hidden;
+				// transition: none;
+
+				.button{
+					margin: 0px;
+					padding: 0px;
+					width: 0px;
+					height: 0px;
+					font-size: 0px;
+					line-height: 0px;
+				}
+			}
+
+			.element-type-p {
+				.p-inputs{
+					max-width: 100%;
+					margin: 14px 7px !important;
+					max-height: 100%;
+					overflow: visible;
+
+					.button{
+						margin: 0 1px;
+						padding: 0px;
+						width: 28px;
+						height: 28px;
+						font-size: 12px;
+						line-height: 28px;
+					}
+				}
+			}
+
+			.element-type-img {
+				.image-inputs{
+					max-width: 100%;
+					margin: 14px 7px !important;
+					max-height: 100%;
+					overflow: visible;
+				}
+			}
+
+			.view-settings, .view-styles{
+				max-width: 0px;
+				max-height: 0px;
+				overflow: hidden;
+			}
+
+			.view-settings.current-view-settings, .view-styles.current-view-styles{
+				max-width: 100%;
+				max-height: 100%;
+				overflow: visible;
+			}
+		}
+	}
+
+	.input{
+		display: block;
+		// margin: 21px 0px;
+	}
+
+	a-ckolor{
+		display: inline-block;
+
+		.c-ckolor__input-wrapper{
+			width: auto;
+			font-size: 12px;
+			box-shadow: 0 1px 1px rgba(0,41,54,.2);
+			margin: 0px;
+			height: 19px;
+			padding: 4px 5px 5px;
+		}
+	}
+}

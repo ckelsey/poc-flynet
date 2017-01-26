@@ -1,0 +1,16 @@
+<div class="element-events">
+	<div class="element-event flex-wrapper" ng-repeat="(evtkey, event) in ElementActions.selectedElement.data.events">
+		<span class="element-event-name-wrapper flex-wrapper flex-grow1">
+			<span class="element-event-name flex-grow1" ng-bind="evtkey"></span>
+			<button ng-click="openAddFunctionDialogue(evtkey)">Add</button>
+		</span>
+		<span class="element-function-list">
+			<div class="element-event-function flex-wrapper" ng-repeat="(key, function) in event.functions">
+				<span class="element-event-function-name flex-grow1" ng-bind="function.name"></span>
+				<span class="element-function-actions">
+					<button class="primary small" ng-click="removeFunction(evtkey, function)">Remove</button>
+				</span>
+			</div>
+		</span>
+	</div>
+</div>

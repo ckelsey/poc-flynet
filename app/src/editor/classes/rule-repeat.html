@@ -1,0 +1,5 @@
+<div class="class-rule" ng-repeat="(ruleKey, ruleValue) in clss.rules track by ruleKey">
+	<span ng-bind="ruleKey"></span>
+	<span>:</span>
+	<span ng-bind="ruleValue" contenteditable="true" class-rule class-name="{{clss.name}}" rule-name="{{ruleKey}}"></span>
+</div>

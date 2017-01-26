@@ -1,0 +1,134 @@
+@import "colors";
+
+sidebar-component{
+	display: inline-block;
+	height: 100%;
+
+	#sidebar{
+		height: 100%;
+		display: flex;
+		width: 40px;
+		transition: all .2s;
+
+		&.drawer-open{
+			height: 100%;
+			width: 100px;
+
+			&.templates-open{
+				height: 100%;
+				width: 160px;
+			}
+
+			&.tree-open, &.history-open{
+				height: 100%;
+				width: 40vw;
+			}
+		}
+
+		.history-item{
+			background: $color3;
+			color: $color7;
+			padding: 5px;
+			margin: 3px;
+			font-size: 12px;
+			cursor: pointer;
+
+			&.active {
+				background: $color4;
+			}
+		}
+	}
+
+	.sidebar-column{
+		vertical-align: top;
+	}
+
+	#sidebar-buttons{
+		width: 40px;
+
+		button{
+			width: 100%;
+			transform: scale(1) translateZ(0);
+			filter: blur(none);
+			backface-visibility: hidden;
+			transition: transform .2s, background .2s;
+
+			&:hover{
+				transform: scale(1.1) translateZ(0);
+				background: rgba(255, 255, 255, 0.07);
+			}
+		}
+	}
+
+	#sidebar-drawer{
+		width: 100%;
+	}
+
+	.sidebar-drawer{
+		background: $color2;
+		width: 0px;
+		height: 0%;
+		overflow: auto;
+		transition: width .2s, height .2s;
+
+		&.active{
+			height: 100%;
+			width: 60px;
+
+			&.templates{
+				width: 120px;
+			}
+
+			&.tree{
+				width:100%;
+			}
+		}
+
+		button {
+			background: $color5;
+			color: #fff;
+			font-size: 12px;
+			width: 100%;
+			margin-top: 7px;
+			transform: scale(1) translateZ(0);
+			filter: blur(none);
+			backface-visibility: hidden;
+			transition: transform .2s, background .2s;
+
+			&:hover{
+				transform: scale(1.1) translateZ(0);
+			}
+		}
+	}
+
+	.sidebar-divider{
+		width: 100%;
+		box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.21), 0px 1px 0px rgba(255, 255, 255, 0.07);
+		height: 1px;
+		margin: 14px 0px;
+	}
+
+	.template-link{
+		color: $color7;
+		font-size: 12px;
+		padding: 7px 3px 7px 10px;
+		box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.14), 0px 1px 0px rgba(255, 255, 255, 0.05);
+		cursor: pointer;
+		position: relative;
+		transform: scale(1) translateZ(0);
+		filter: blur(none);
+		backface-visibility: hidden;
+		transition: transform .2s, background .2s, box-shadow .2s;
+
+		&:hover{
+			transform: scale(1.05) translateZ(0);
+			background: $color3;
+			box-shadow: none;
+			z-index: 9999;
+		}
+	}
+}
+
+#sidebar-area{
+	background: $color3;
+}

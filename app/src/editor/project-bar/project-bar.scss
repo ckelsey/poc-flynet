@@ -1,0 +1,45 @@
+@import "colors";
+
+project-bar{
+	width: 100%;
+	height: 43px;
+	overflow: hidden;
+	background: $color2;
+	transition: height .2s;
+
+	h3{
+		padding: 4px 14px 21px 0px;
+		margin: 0px;
+		color: $color7;
+
+		span{
+			font-size: 14px;
+			font-weight: normal;
+			margin-left: 14px;
+		}
+	}
+
+	.flex-wrapper{
+		height: 100%;
+
+		.flex-column{
+			height: 100%;
+		}
+	}
+
+	button{
+		background: $color3;
+		border-radius: 2px;
+		transform: scale(1) translateZ(0);
+		transition: transform .2s;
+		padding: 7px 14px;
+
+		&:nth-child(1){
+			background: $color5;
+		}
+
+		&:hover{
+			transform: scale(1.1) translateZ(0);
+		}
+	}
+}

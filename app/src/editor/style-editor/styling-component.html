@@ -1,0 +1,66 @@
+<div class="styling-component" ng-class="ElementActions.selectedElement ? 'active' : ''">
+
+	<div class="styling-component-inner">
+
+		<div class="flex-wrapper styling-header well">
+			<div class="input flex-item flex-grow1 flex-bottom">
+				<input type="text" id="el-name" ng-model="ElementActions.selectedElement.data.name" ng-blur="updateAttr()" class="in-line" />
+			</div>
+			<div class="tabs flex-item flex-bottom">
+				<button ng-click="settingsView = 'styles'" ng-class="settingsView === 'styles' ? 'active' : ''">Styles</button>
+				<button ng-click="settingsView = 'settings'" ng-class="settingsView === 'settings' ? 'active' : ''" ng-show="ElementActions.selectedElement.data.tag !== 'div'">Settings</button>
+				<button ng-click="settingsView = 'classes'" ng-class="settingsView === 'classes' ? 'active' : ''">Classes</button>
+				<button ng-click="settingsView = 'events'" ng-class="settingsView === 'events' ? 'active' : ''">Events</button>
+			</div>
+		</div>
+
+		<div class="styling-component-inner-inner">
+
+			<div class="flex-wrapper">
+				<div class="flex-wrapper well" ng-if="settingsView === 'settings' && ElementActions.selectedElement.data.tag !== 'div'">
+					<element-setting-inputs class="flex-item flex-grow1 flex-bottom" ng-if="settingsView === 'settings'" ng-repeat="data in inputs[settingsView][ElementActions.selectedElement.data.tag]" ng-class="ElementActions.selectedElement.data.tag === 'p' ? 'non-flex' : ''" data="data" on-edit="updateAttr()"></element-setting-inputs>
+				</div>
+
+				<div ng-if="settingsView === 'settings' && ElementActions.selectedElement.data.tag === 'div'"><span data="{{switchViewToStyles()}}"></span></div>
+
+				<div ng-if="settingsView === 'styles'" ng-init="stylesView = 'display'" class="flex-grow1 flex-item">
+					<div class="tabs flex-item flex-bottom">
+						<button ng-click="stylesView = 'display'" ng-class="stylesView === 'display' ? 'active' : ''">Display</button>
+						<button ng-click="stylesView = 'positioning'" ng-class="stylesView === 'positioning' ? 'active' : ''">Position</button>
+						<button ng-click="stylesView = 'dimensions'" ng-class="stylesView === 'dimensions' ? 'active' : ''">Dimensions</button>
+						<button ng-click="stylesView = 'text'" ng-class="stylesView === 'text' ? 'active' : ''">Text</button>
+					</div>
+					<div class="flex-wrapper well">
+						<element-setting-inputs class="flex-item flex-grow1 flex-bottom" ng-if="settingsView === 'styles'" ng-repeat="data in inputs[settingsView][stylesView]" data="data" on-edit="updateAttr()"></element-setting-inputs>
+					</div>
+				</div>
+
+				<div ng-if="settingsView === 'classes'" class="flex-grow1 flex-item">
+					<div class="flex-wrapper well">
+						<element-classes></element-classes>
+					</div>
+				</div>
+
+				<div ng-if="settingsView === 'events'" class="flex-grow1 flex-item">
+					<div class="flex-wrapper well">
+						<element-functions></element-functions>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-wrapper">
+				<div class="flex-item flex-bottom" style="margin-right: 2px;">
+					<button class="primary">Apply</button>
+				</div>
+
+				<div class="flex-item flex-bottom" style="margin-left: 0px; margin-right: 2px;">
+					<button ng-click="deleteElement()" class="primary">Delete</button>
+				</div>
+
+				<div class="flex-item flex-bottom" style="margin-left: 0px;">
+					<button ng-click="ElementActions.selectedElement = null">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

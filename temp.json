@@ -1,0 +1,167 @@
+{
+  "templates": {
+    "element_qpkd14toccgzuxcfzguwx6eprnc3": {
+      "name": "Walmart Finalist",
+      "id": "element_qpkd14toccgzuxcfzguwx6eprnc3",
+      "pages": [
+        {
+          "name": "Blank",
+          "id": "element_opuo379ii5n82xi3jebj1xniemx7",
+          "content": [
+            {
+              "icon": "fa-square-o",
+              "tag": "div",
+              "content": [
+                {
+                  "icon": "fa-square-o",
+                  "tag": "div",
+                  "content": [
+                    {
+                      "icon": "fa-font",
+                      "tag": "p",
+                      "content": [
+                        {
+                          "icon": "fa-font",
+                          "tag": "p",
+                          "content": [
+
+                          ],
+                          "attributes": {
+
+                          },
+                          "id": "element_gey3z3e0zf9vi3o671tfwyg2dhc5",
+                          "text": "\n\t\t\n\t\n\t\n\t\t<div class=\"page\" title=\"Page 1\">\n\t\t\t<div class=\"section\">\n\t\t\t\t<div class=\"layoutArea\">\n\t\t\t\t\t<div class=\"column\">\n\t\t\t\t\t\t<p><span style=\"font-size: 20.000000pt; font-family: 'Times'\">Property and Casualty&nbsp;<\/span><\/p>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>"
+                        }
+                      ],
+                      "attributes": {
+
+                      },
+                      "id": "element_jmvr92n3xcahcnt2l4b020pohi6m",
+                      "text": "\n\t\t\n\t\n\t\n\t\t<div class=\"page\" title=\"Page 1\">\n\t\t\t<div class=\"section\">\n\t\t\t\t<div class=\"layoutArea\">\n\t\t\t\t\t<div class=\"column\">\n\t\t\t\t\t\t<p style=\"\n    pointer-events: none;\n\"><span style=\"font-size: 30.000000pt; font-family: 'Times'\">Finalist Presentation&nbsp;<\/span><\/p>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>"
+                    }
+                  ],
+                  "attributes": {
+                    "style": {
+                      "width": "65%",
+                      "display": "inline-block"
+                    }
+                  },
+                  "id": "element_whnlyaepnsn93vc55wlju6imblun"
+                },
+                {
+                  "icon": "fa-picture-o",
+                  "tag": "img",
+                  "content": [
+
+                  ],
+                  "attributes": {
+                    "width": "20%",
+                    "height": null,
+                    "src": "https:\/\/good360.org\/wp-content\/uploads\/2016\/09\/Logo_Walmart_05.jpg",
+                    "style": {
+                      "display": "inline-block",
+                      "width": "33%"
+                    }
+                  },
+                  "id": "element_hdd0kvyni6o06k2ewepkek7no6mc"
+                }
+              ],
+              "attributes": {
+                "style": {
+                  "padding": "21px 2%",
+                  "background": "#fff"
+                }
+              },
+              "id": "element_plyclpjxexu4gptwrkjohtlojx9f"
+            },
+            {
+              "icon": "fa-square-o",
+              "tag": "div",
+              "content": [
+                {
+                  "icon": "fa-font",
+                  "tag": "p",
+                  "content": [
+
+                  ],
+                  "attributes": {
+                    "style": {
+                      "margin": "0px"
+                    }
+                  },
+                  "id": "element_4flx3dlcgjft5i9qka8bxirst3aj",
+                  "text": "\n\t\t\n\t\n\t\n\t\t<div class=\"page\" title=\"Page 1\" style=\"\n    padding: 6px 3%;\n\">\n\t\t\t<div class=\"section\">\n\t\t\t\t<div class=\"layoutArea\">\n\t\t\t\t\t<div class=\"column\">\n\t\t\t\t\t\t<p><span style=\"font-size: 17px;font-family: 'Times';\">Prepared for: WalMart and Willis Towers Watson\nDecember 8, 2016&nbsp;<\/span><\/p>\n\t\t\t\t\t<\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>"
+                }
+              ],
+              "attributes": {
+                "style": {
+                  "background": "#fff"
+                }
+              },
+              "id": "element_8wtmgfcrystshngn0pm0fkqnnizw"
+            },
+            {
+              "icon": "fa-square-o",
+              "tag": "div",
+              "content": [
+                {
+                  "icon": "fa-picture-o",
+                  "tag": "img",
+                  "content": [
+
+                  ],
+                  "attributes": {
+                    "width": null,
+                    "height": null,
+					"src": "https://s3-us-west-2.amazonaws.com/rickgilbert/media/images/1200/met/main1.png",
+					"style": {
+						"margin": "auto",
+						"width": "100%"
+					}
+                  },
+                  "id": "element_3hrqo1p69wzhfudfsaosmq7p6ovb"
+                }
+              ],
+              "attributes": {
+
+              },
+              "id": "element_gm5tzpe1n7psnlimzrdtjmpfukhb"
+            },
+            {
+              "icon": "fa-square-o",
+              "tag": "div",
+              "content": [
+                {
+                  "icon": "fa-picture-o",
+                  "tag": "img",
+                  "content": [
+
+                  ],
+                  "attributes": {
+                    "width": null,
+                    "height": null,
+                    "src": "https://s3-us-west-2.amazonaws.com/rickgilbert/media/images/1200/met/footer.png",
+					"style": {
+						"margin": "auto",
+						"width": "100%"
+					}
+                  },
+                  "id": "element_j5b6mx2tqps2d9xy5blc0svhppeb"
+                }
+              ],
+              "attributes": {
+
+              },
+              "id": "element_dlggvjcm3w0qhyht2nj6k5x9ywsw"
+            }
+          ]
+        }
+      ],
+      "history": [
+
+      ]
+    }
+  },
+  "lastTemplate": "element_qpkd14toccgzuxcfzguwx6eprnc3",
+  "lastPage": 0
+}

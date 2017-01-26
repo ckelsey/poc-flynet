@@ -1,0 +1,12 @@
+{
+	"production": {
+		"accessKeyId": "key",
+		"secretAccessKey": "secret",
+		"region": "us-east-1",
+		"params": {
+			"Bucket": "bucket"
+		}
+	},
+	"productionHeaders": {},
+	"productionDistribution": "cloudfront distribution"
+}

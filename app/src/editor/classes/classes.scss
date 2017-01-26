@@ -1,0 +1,98 @@
+@import "colors";
+
+#classes-component{
+	font-size: 12px;
+
+	.toggler{
+		padding: 7px 17px;
+		background: $color3;
+		color: $color7;
+		border-radius: 2px;
+		transition: all .2s;
+	}
+
+	.toggle-content{
+		background: #fff;
+		border-radius: 0px 0px 2px 2px;
+		padding: 0px 17px;
+		// transition: all .2s;
+	}
+
+	.class-rule{
+		// transition: all .2s;
+	}
+
+	.toggle-item{
+
+		&.active{
+
+			.toggle-content{
+				padding: 7px 17px;
+				box-shadow: 0px 1px 1px transparentize($color2, .85);
+			}
+
+			.class-rule{
+				font-size: 12px;
+				    margin: 2px 0px;
+				    background: #fafafa;
+				    padding: 7px;
+			}
+
+			[contenteditable]{
+				outline: none !important;
+				background: transparentize($color6, .65);
+				padding: 3px 7px;
+				box-shadow: 0px 0px 0px 1px transparentize($color2, .85);
+			    border-radius: 2px;
+				display: inline-block;
+				// transition: all .1s;
+
+				// &:focus{
+				// 	box-shadow: 0px 1px 0px 1px transparentize($color2, .85), 0px 1px 3px 1px transparentize($color2, .85);
+				// 	font-size: 14px;
+				// 	margin: -1px 0px;
+				// }
+			}
+		}
+	}
+}
+
+element-classes{
+	display: block;
+	width: 100%;
+
+	.element-classes{
+		width: 100%;
+	}
+
+	.element-class{
+		width: 100%;
+		padding: 7px;
+		color: $color7;
+		background: $color2;
+		box-sizing: border-box;
+		margin: 7px 0px;
+	}
+}
+
+
+
+.dialogue-overlay .dialogue-box{
+	add-classes-component{
+		.toggler{
+			button{
+				font-size: 12px;
+				background: $color5;
+				padding: 3px 7px;
+			}
+		}
+
+		.toggle-item .toggler:before{
+			top: 13px;
+		}
+
+		.toggle-item.active .toggler:before{
+			top: 16px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+<div id="sidebar" ng-class="{'drawer-open': drawerElements, 'drawer-open templates-open': templateDrawer}">
+	<div id="sidebar-buttons" class="sidebar-column">
+		<button ng-click="newTemplate()"><i class="fa fa-plus-square"></i></button>
+		<button ng-click="templateDrawer ? templateDrawer = false : templateDrawer = true"><i class="fa fa-folder-open"></i></button>
+		<button ng-show="ElementService.templateName"><i class="fa fa-floppy-o"></i></button>
+		<!-- <button><i class="fa fa-cloud-upload"></i></button> -->
+
+		<div class="sidebar-divider" ng-if="ElementService.templateName"></div>
+
+		<button ng-show="ElementService.templateName" ng-click="drawerElements ? drawerElements = false : drawerElements = true"><i class="fa fa-cubes"></i></button>
+		<!-- <button ng-show="ElementService.templateName" ng-click="editElements ? editElements = false : editElements = true; ElementService.selectedElement = null"><i class="fa fa-pencil"></i></button> -->
+		<button ng-show="ElementService.templateName" ng-click="reset()"><i class="fa fa-refresh"></i></button>
+<!--
+		<button><i class="fa fa-cogs"></i></button>
+
+		<div class="sidebar-divider"></div>
+
+		<button><i class="fa fa-code"></i></button>
+		<button>{}</button>
+
+		<div class="sidebar-divider"></div>
+
+
+		<button ng-click="reset()"><i class="fa fa-undo"></i></button>
+		<button ng-click="reset()"><i class="fa fa-repeat"></i></button>
+
+		<div class="sidebar-divider"></div>
+
+		<button ng-click="test()"><i class="fa fa-exclamation-circle"></i></button>
+	-->
+	</div>
+	<div id="sidebar-drawer" class="sidebar-column">
+		<div class="sidebar-drawer" ng-class="drawerElements ? 'active' : ''">
+			<drag-drop-element ng-repeat="element in ElementService.elements track by element.tag" element="{{element}}"><i class="fa" ng-class="element.icon"></i></drag-drop-element>
+		</div>
+		<div class="sidebar-drawer" ng-class="templateDrawer ? 'active templates' : ''">
+			<div ng-click="openTemplate(template)" ng-repeat="template in ElementService.allData.templates track by template.id" ng-bind="template.name"></div>
+			<button ng-click="templateService.importTemplatesDialogueOpen = true">Import</button>
+		</div>
+	</div>
+</div>

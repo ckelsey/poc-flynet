@@ -1,0 +1,10 @@
+<div id="classes-component">
+	<h3>Classes</h3>
+
+	<div ng-repeat="class in ElementModel.elementStructure.classes track by class.id" ng-class="{'active':classesToggle[class.id]}" class="toggle-item">
+		<div class="toggler" ng-bind="class.name" ng-click="classesToggle[class.id] = classesToggle[class.id] ? false : true"></div>
+		<div class="toggle-content">
+			<rule-repeat clss="class"></rule-repeat>
+		</div>
+	</div>
+</div>

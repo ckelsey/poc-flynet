@@ -1,0 +1,43 @@
+<div id="sidebar" ng-class="{'drawer-open': drawerElements, 'drawer-open templates-open': templateDrawer, 'drawer-open tree-open': drawerElementTree, 'drawer-open history-open': drawerHistory}">
+	<div id="sidebar-buttons" class="sidebar-column">
+		<button ng-click="newTemplate()"><i class="fa fa-plus-square"></i></button>
+		<button ng-click="openTemplateDrawer()"><i class="fa fa-folder-open"></i></button>
+		<button ng-show="ElementModel.templateName"><i class="fa fa-floppy-o"></i></button>
+
+		<div class="sidebar-divider" ng-if="ElementModel.templateName"></div>
+
+		<button ng-show="ElementModel.templateName" ng-click="undo()"><i class="fa fa-undo"></i></button>
+		<button ng-show="ElementModel.templateName" ng-click="redo()"><i class="fa fa-repeat"></i></button>
+		<button ng-show="ElementModel.templateName" ng-click="openHistory()"><i class="fa fa-history"></i></button>
+
+		<div class="sidebar-divider" ng-if="ElementModel.templateName"></div>
+
+		<button ng-show="ElementModel.templateName" ng-click="openElementDrawer()"><i class="fa fa-cubes"></i></button>
+		<button ng-show="ElementModel.templateName" ng-click="openElementTreeDrawer()"><i class="fa fa-tree"></i></button>
+
+		<div class="sidebar-divider"></div>
+
+		<button ng-show="ElementModel.templateName" ng-click="openClasses()"><i class="fa fa-css3"></i></button>
+		<button ng-show="ElementModel.templateName" ng-click="openFunctions()"><i class="fa fa-code"></i></button>
+
+		<div class="sidebar-divider" ng-if="ElementModel.templateName"></div>
+
+		<button ng-show="ElementModel.templateName" ng-click="reset()"><i class="fa fa-refresh"></i></button>
+
+	</div>
+	<div id="sidebar-drawer" class="sidebar-column">
+		<div class="sidebar-drawer" ng-class="drawerElements ? 'active' : ''">
+			<drag-drop-element ng-repeat="(elementName, element) in ElementModel.elements track by elementName" element="{{element}}" ng-bind="elementName"></drag-drop-element>
+		</div>
+		<div class="sidebar-drawer" ng-class="templateDrawer ? 'active templates' : ''">
+			<div class="template-link" ng-click="openTemplate(template)" ng-repeat="template in ElementModel.allData.templates track by template.id" ng-bind="template.name"></div>
+			<button ng-click="templateService.importTemplatesDialogueOpen = true">Import</button>
+		</div>
+		<div class="sidebar-drawer" ng-class="drawerElementTree ? 'active tree' : ''">
+			<html-tree data="data" ng-repeat="data in treeData track by $index"></html-tree>
+		</div>
+		<div class="sidebar-drawer" ng-class="drawerHistory ? 'active tree' : ''">
+			<div class="history-item" ng-repeat="history in ElementModel.elementStructure.history track by $index" ng-class="$index === ElementModel.elementStructure.historyIndex ? 'active' : ''" ng-bind="getDate(history)" ng-click="goToHistory($index)"></div>
+		</div>
+	</div>
+</div>

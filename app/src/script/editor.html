@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="dist/css/app_editor.min.css">
+
+<div ng-controller="EditorViewCtlr as editor" style="width:100%;height:100%;">
+	<div id="wrapper">
+		<div class="flex-fullscreen flex-column">
+
+			<div>
+				<div class="flex-row" ng-if="ElementModel.templateName">
+					<project-bar></project-bar>
+				</div>
+			</div>
+
+			<div class="main-section">
+				<div class="flex-wrapper main-section-inner" style="flex-flow: column; height: 100%; top: -43px; margin-top: 43px; position: relative;">
+					<div class="flex-row flex-grow1" style="width: 100%;">
+						<div id="sidebar-area" class="wrapper-column">
+							<sidebar-component></sidebar-component>
+						</div>
+
+						<div id="preview-area" class="wrapper-column">
+							<!-- <iframe id="presentation-frame" ng-src="{{Utility.trust_url('/?mode=editor')}}" width="100%" height="100%" allowTransparency="true" frameborder="0"></iframe> -->
+							<iframe id="presentation-frame" src="/" width="100%" height="100%" allowTransparency="true" frameborder="0"></iframe>
+						</div>
+					</div>
+					<div style="width: 100%;">
+						<styling-component></styling-component>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="new-template-dialogue" class="dialogue-overlay" ng-class="functionsService.addFunctionDialogueOpen || functionsService.dialogueOpen || classesService.addClassDialogueOpen || classesService.dialogueOpen || templateService.newTemplateDialogOpen || templateService.importTemplatesDialogueOpen ? 'active' : ''">
+		<div class="dialogue-box" ng-show="templateService.newTemplateDialogOpen">
+			<form ng-submit="templateService.newTemplate(newtemplate)">
+				<h3>New project</h3>
+				<div class="input">
+					<label for="newtemplatename">Title</label>
+					<input type="text" ng-model="newtemplate.name" id="newtemplatename" />
+				</div>
+				<div class="input submit-buttons">
+					<button><i class="fa fa-check"></i></button>
+					<button ng-click="templateService.cancel()"><i class="fa fa-close"></i></button>
+				</div>
+			</form>
+		</div>
+
+		<div class="dialogue-box" ng-show="templateService.importTemplatesDialogueOpen">
+			<form ng-submit="templateService.importTemplate(importTemplateData)">
+				<h3>Import project data</h3>
+				<div class="input">
+					<label for="importdata">Data</label>
+					<input type="text" ng-model="importTemplateData" id="importdata" />
+				</div>
+				<div class="input submit-buttons">
+					<button><i class="fa fa-check"></i></button>
+					<button ng-click="templateService.cancel()"><i class="fa fa-close"></i></button>
+				</div>
+			</form>
+		</div>
+
+		<div class="dialogue-box classes" ng-show="classesService.dialogueOpen">
+			<classes-component></classes-component>
+		</div>
+
+		<div class="dialogue-box classes" ng-show="classesService.addClassDialogueOpen">
+			<add-classes-component></add-classes-component>
+		</div>
+
+		<div class="dialogue-box" ng-show="functionsService.dialogueOpen">
+			<functions-component></functions-component>
+		</div>
+
+		<div class="dialogue-box" ng-show="functionsService.addFunctionDialogueOpen">
+			<add-function></add-function>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<div ng-controller="EditorViewCtlr as editor" style="width:100%;height:100%;">
+	<div id="wrapper">
+		<div class="flex-fullscreen flex-column">
+			<div class="flex-row flex-grow1">
+				<div id="sidebar-area" class="wrapper-column">
+					<sidebar-component></sidebar-component>
+				</div>
+
+				<div id="preview-area" class="wrapper-column">
+					<!-- <iframe id="presentation-frame" ng-src="{{Utility.trust_url('/?mode=editor')}}" width="100%" height="100%" allowTransparency="true" frameborder="0"></iframe> -->
+					<iframe id="presentation-frame" src="https://viewer.mediafly.com/metlife1118/interactive/62047856f3fd4525b763ec9b0ab17601product291866/index.html" width="100%" height="100%" allowTransparency="true" frameborder="0"></iframe>
+				</div>
+			</div>
+			<div class="flex-row" ng-if="ElementService.templateName">
+				<div id="style-area" ng-class="editElements || ElementService.selectedElement ? 'active' : ''">
+					<styling-component></styling-component>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="new-template-dialogue" class="dialogue-overlay" ng-class="templateService.newTemplateDialogOpen || templateService.importTemplatesDialogueOpen ? 'active' : ''">
+		<div class="dialogue-box" ng-show="templateService.newTemplateDialogOpen">
+			<h3>New template</h3>
+			<div class="input">
+				<label for="newtemplatename">Title</label>
+				<input type="text" ng-model="newtemplate.name" id="newtemplatename" />
+			</div>
+			<div class="input submit-buttons">
+				<button ng-click="templateService.newTemplate(newtemplate)"><i class="fa fa-check"></i></button>
+				<button ng-click="templateService.newTemplateDialogOpen = false;"><i class="fa fa-close"></i></button>
+			</div>
+		</div>
+
+		<div class="dialogue-box" ng-show="templateService.importTemplatesDialogueOpen">
+			<h3>Import templates</h3>
+			<div class="input">
+				<label for="importdata">Data</label>
+				<input type="text" ng-model="importTemplateData" id="importdata" />
+			</div>
+			<div class="input submit-buttons">
+				<button ng-click="templateService.importTemplate(importTemplateData)"><i class="fa fa-check"></i></button>
+				<button ng-click="templateService.importTemplatesDialogueOpen = false"><i class="fa fa-close"></i></button>
+			</div>
+		</div>
+	</div>
+</div>

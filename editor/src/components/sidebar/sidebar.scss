@@ -1,0 +1,82 @@
+// @import "./../../style/colors.scss";
+$color1: #000606;
+$color2: #002936;
+$color3: #00394c;
+$color4: #035a86;
+$color5: #06a7f9;
+$color6: #8bd6fd;
+$color7: #d5f1fd;
+
+$colorOrange: rgba(229, 156, 37, 1);
+
+sidebar-component{
+	display: inline-block;
+	height: 100%;
+
+	#sidebar{
+		height: 100%;
+		display: flex;
+		width: 40px;
+		transition: width .2s height .2s;
+
+		&.drawer-open{
+			height: 100%;
+			width: 100px;
+
+			&.templates-open{
+				height: 100%;
+				width: 160px;
+			}
+		}
+	}
+
+	.sidebar-column{
+		    vertical-align: top;
+	}
+
+	#sidebar-buttons{
+		width: 40px;
+
+		button{
+			width: 100%;
+			transform: scale(1) translateZ(0);
+			filter: blur(none);
+			backface-visibility: hidden;
+			transition: transform .2s, background .2s;
+
+			&:hover{
+				transform: scale(1.1) translateZ(0);
+				background: rgba(255, 255, 255, 0.07);
+			}
+		}
+	}
+
+	.sidebar-drawer{
+		background: $color2;
+		width: 0px;
+		height: 0%;
+		overflow: hidden;
+		transition: width .2s, height .2s;
+
+		&.active{
+			height: 100%;
+			width: 60px;
+
+			&.templates{
+				height: 100%;
+				width: 120px;
+			}
+		}
+	}
+
+	.sidebar-divider{
+		width: 100%;
+		box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.21), 0px 1px 0px rgba(255, 255, 255, 0.07);
+		height: 1px;
+		margin: 14px 0px;
+	}
+}
+
+#sidebar-area{
+	background: $color3;
+}

@@ -1,0 +1,65 @@
+- save
+
+- element settings
+	- styles
+
+	- classes
+		- define and set
+	- events
+		- define and set
+
+- component menu
+	- on click, have active state
+	- only allow one component per click
+	- submenu with predefined component classes
+
+	- input
+	- button
+	- carousel
+	- repeater
+	- video
+	- audio
+	- link
+	- icon
+
+
+
+- editor
+	- only if user has access
+	- close button
+
+- viewer
+	- edit button if user has access
+	- different project menu
+	- page navigation
+	- close
+
+
+
+
+
+
+
+
+
+DEBT
+- on mobile because of position:absolute, things won't wrap correctly
+
+
+
+IMPROVEMENTS
+- dragging cursor when dragging new element to iframe
+- guides relative to other elements on drag/resize
+- hover titles on icons
+- wysiwyg
+	- active states for buttons if in use
+	- padding
+
+
+BUGS
+- clicking on element doesn't always stick, i.e. click on an image, change aspect ratio, click on element again
+- no validation on prev/next page
+- color picker check and x is gone on wysiwyg?
+
+
+- move debouncer to utilities
